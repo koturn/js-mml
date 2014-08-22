@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+
+<h1>Web MIDI API - MIDI IN & OUT</h1>
+<div>
+  <h2>select MIDI</h2>
+  <div id="messageArea" class="ui-state-highlight ui-corner-all" style="border: 1px solid #ccc; margin:5px; padding: 5px;"></div>
+
+  <p>
+  <p>IN - Count : <span id="inCount"></span></p>
+  <p><select name="inputPort" id="inputPort" size="1"  onChange="changeInput()">
+  </select></p>
+  </p>
+
+  <p>
+  <p>OUT - Count : <span id="outCount"></span></p>
+  <p><select name="outputPort" id="outputPort" size="1" onChange="changeOutput()">
+  </select></p>
+  </p>
+</div>
+
+
+<p>
+<p>MML</p>
+<p><textarea id="mml" rows="20" cols="100">
+T195 L8 O5
+eerercergrr4&gt;grr4&lt;
+
+crr&gt;grrerrarbrb-arg6&lt;c6g6arfgrercd&gt;br4&lt;
+crr&gt;grrerrarbrb-arg6&lt;c6g6arfgrercd&gt;br4&lt;
+
+r4gf+fd+rer&gt;g+a&lt;c&gt;ra&lt;cd
+r4gf+fd+rer&lt;crccrr4
+&gt;r4gf+fd+rer&gt;g+a&lt;c&gt;ra&lt;cd
+r4e-rrdrrcrr4r2
+
+r4gf+fd+rer&gt;g+a&lt;c&gt;ra&lt;cd
+r4gf+fd+rer&lt;crccrr4
+&gt;r4gf+fd+rer&gt;g+a&lt;c&gt;ra&lt;cd
+r4e-rrdrrcrr4r2
+
+ccrcrcdrecr&gt;agrr4
+&lt;ccrcrcder1
+ccrcrcdrecr&gt;agrr4&lt;
+
+eerercergrr4&gt;grr4&lt;
+crr&gt;grrerrarbrb-arg6&lt;c6g6arfgrercd&gt;br4&lt;
+crr&gt;grrerrarbrb-arg6&lt;c6g6arfgrercd&gt;br4&lt;
+
+ecr&gt;gr4g+ra&lt;frf&gt;arr4
+b6&lt;a6a6a6g6f6ecr&gt;agrr4&lt;
+ecr&gt;gr4g+ra&lt;frf&gt;arr4
+b6&lt;f6f6f6e6d6crr2.
+
+ecr&gt;gr4g+ra&lt;frf&gt;arr4
+b6&lt;a6a6a6g6f6ecr&gt;agrr4&lt;
+ecr&gt;gr4g+ra&lt;frf&gt;arr4
+b6&lt;f6f6f6e6d6crr2.
+
+ccrcrcdrecr&gt;agrr4
+&lt;ccrcrcder1
+ccrcrcdrecr&gt;agrr4&lt;
+
+eerercergrr4&gt;grr4&lt;
+
+ecr&gt;gr4g+ra&lt;frf&gt;arr4
+b6&lt;a6a6a6g6f6ecr&gt;agrr4&lt;
+ecr&gt;gr4g+ra&lt;frf&gt;arr4
+b6&lt;f6f6f6e6d6crr2.
+
+T180 c4.&gt;g4.e4 T160 a6b6a6 T150 a-6b-6a-6g1
+</textarea></p>
+<p><button onclick="play()">Play</button></p>
+</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="midi.js"></script>
+<script src="MMLParser.js"></script>
+<script>
+
+</script>
+</body>
+</html>
