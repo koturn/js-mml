@@ -2,31 +2,20 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>js-mml</title>
 </head>
 <body>
 
-<h1>Web MIDI API - MIDI IN & OUT</h1>
+<h1>Web MIDI API を用いたMMLプレイヤー</h1>
 <div>
-  <h2>select MIDI</h2>
-  <div id="messageArea" class="ui-state-highlight ui-corner-all" style="border: 1px solid #ccc; margin:5px; padding: 5px;"></div>
-
   <p>
-  <p>IN - Count : <span id="inCount"></span></p>
-  <p><select name="inputPort" id="inputPort" size="1"  onChange="changeInput()">
-  </select></p>
-  </p>
-
-  <p>
-  <p>OUT - Count : <span id="outCount"></span></p>
-  <p><select name="outputPort" id="outputPort" size="1" onChange="changeOutput()">
-  </select></p>
+  MIDI-OUT:
+  <select name="outputPort" id="outputPort" size="1" onChange="changeOutput()"></select>
   </p>
 </div>
 
-
 <p>
-<p>MML</p>
+<p>以下の入力欄にMMLを記述して，playボタンを押してください．</p>
 <p><textarea id="mml" rows="20" cols="100">
 T195 L8 O5
 eerercergrr4&gt;grr4&lt;
@@ -82,8 +71,10 @@ T180 c4.&gt;g4.e4 T160 a6b6a6 T150 a-6b-6a-6g1
 <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
 <script src="midi.js"></script>
 <script src="MMLParser.js"></script>
-<script>
 
-</script>
+<!-- GitHub Ribbon -->
+<a href="https://github.com/koturn/js-brainfuck">
+  <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+</a>
 </body>
 </html>
