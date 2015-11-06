@@ -10,7 +10,7 @@
 <div>
   <p>
   MIDI-OUT:
-  <select name="outputPort" id="outputPort" size="1" onChange="changeOutput()"></select>
+  <select name="outputPort" id="outputPort" size="1" onChange="midi.changeOutput()"></select>
   </p>
 </div>
 
@@ -64,13 +64,20 @@ b6&lt;f6f6f6e6d6crr2.
 
 T180 c4.&gt;g4.e4 T160 a6b6a6 T150 a-6b-6a-6g1
 </textarea></p>
-<p><button onclick="play()">Play</button></p>
+<p><button onclick="mmlParser.play()">Play</button></p>
 </p>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
 <script src="midi.js"></script>
 <script src="MMLParser.js"></script>
+<script>
+(function(global) {
+  'use strict';
+  global.mmlParser = new MMLParser;
+  global.midi = new Midi;
+})((this || 0).self || global);
+</script>
 
 <!-- GitHub Ribbon -->
 <a href="https://github.com/koturn/js-mml">
